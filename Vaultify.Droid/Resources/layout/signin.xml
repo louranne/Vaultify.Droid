@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/bg"
+    android:paddingHorizontal="16dp">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="32dp"
+        android:background="@drawable/container"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/headline_signin"
+            style="@style/TextAppearance.Vaultify.Headline4"
+            android:textStyle="bold"
+            android:textColor="@color/vaultify_colorOnPrimary"
+            android:layout_marginBottom="32dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/placeholder_email"
+            android:layout_marginBottom="8dp"
+            app:helperTextEnabled="true"
+            app:boxBackgroundColor="@android:color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Vaultify.Body1"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/placeholder_pass"
+            android:layout_marginBottom="8dp"
+            app:passwordToggleEnabled="true"
+            app:boxBackgroundColor="@android:color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textAppearance="@style/TextAppearance.Vaultify.Body1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSignin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/vaultify_colorOnSecondary"
+            android:text="@string/button_signin"/>
+
+        <TextView
+            android:id="@+id/linkForgot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hyperlink_forgot"
+            android:gravity="end"
+            android:textAllCaps="false"
+            style="@style/TextAppearance.Vaultify.Caption"
+            android:textColor="@color/vaultify_colorOnPrimary"
+        />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/tvText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/separator"
+                style="@style/TextAppearance.Vaultify.Caption"
+                android:textColor="@color/vaultify_colorOnPrimary"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tvText"
+                android:background="@color/vaultify_colorOnPrimary"
+            />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tvText"
+                android:background="@color/vaultify_colorOnPrimary"
+            />
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGoogle"
+            android:text="@string/button_google"
+            app:icon="@drawable/ic_google"
+            app:iconSize="@dimen/design_bottom_navigation_icon_size"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            app:iconTint="@null"
+            app:strokeColor="@color/vaultify_colorSecondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+        >
+
+            <TextView
+                android:id="@+id/pretext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/preline_create"
+                style="@style/TextAppearance.Vaultify.Caption"
+                android:textColor="@color/vaultify_colorOnPrimary"/>
+
+            <TextView
+                android:id="@+id/hyperlink_create"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/pretext"
+                android:text="@string/hyperlink_create"
+                android:layout_alignBaseline="@id/pretext"
+                style="@style/TextAppearance.Vaultify.Caption"
+                android:textColor="@color/vaultify_colorSecondary"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>
